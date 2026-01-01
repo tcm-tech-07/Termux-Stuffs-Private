@@ -62,15 +62,19 @@ clear
 
 # Termux API Permissions
 echo -e "${BOLD_YELLOW}Setting up Termux API Permissions...${RESET}"
-clear
 echo -e "${BOLD_RED}Give Microphone Permission to Termux API${RESET}"
-sleep 1
+sleep 2
+clear
 
 termux-microphone-record -d 4
 
 sleep 1
-clear
 echo -e "${BOLD_GREEN}Done Successfully...${RESET}"
+clear
+
+# HWA Setup (Adreno)
+echo -e "${BOLD_YELLOW}Installing & Configuring HWA... (only for several Adreno devices)${RESET}"
+
 mkdir -p ~/Temp-HWA
 cd ~/Temp-HWA
 
