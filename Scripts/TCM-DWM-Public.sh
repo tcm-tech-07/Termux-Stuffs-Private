@@ -54,7 +54,8 @@ pkg install -y cava
 pkg install -y mousepad
 pkg install -y sl
 pkg install -y dwm
-pkg install -y thunar thunar-archive-plugin
+pkg install -y nemo
+pkg install -y lxappearance
 pkg install -y st
 pkg install -y feh
 pkg install -y xterm
