@@ -47,7 +47,7 @@ rm -rf ~/Temp-HWA
 pkg install -y glmark2
 pkg install -y vkmark
 
-pkg install -y openssh gh git tigervnc-viewer
+pkg install -y openssh gh git tigervnc tigervnc-viewer
 pkg install -y firefox
 pkg install -y mpv
 pkg install -y cava
