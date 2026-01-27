@@ -1,9 +1,9 @@
 #!/data/data/com.termux/files/usr/bin/bash
 
-pkg update > /dev/null 2>&1 || {
+pkg update || {
 	echo "failed to update packges, change mirror"
-	sleep 2
-	termux-change-repo
+	sleep 1
+	termux-change-repo || echo "fix the mirror at first"
 }
 
 pkg upgrade -y || {
