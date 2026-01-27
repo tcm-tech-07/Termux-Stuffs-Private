@@ -3,9 +3,13 @@
 pkg update || {
 	echo "failed to update packges, change mirror"
 	sleep 1
-	termux-change-repo || echo "fix the mirror at first"
+	termux-change-repo || { 
+	echo "fix the mirror at first"
+	exit 1
+	}
 }
 
+pkg update > /dev/null 2>&1 || exit 1
 pkg upgrade -y || {
 	echo "failed to upgrade packages. Choose a up-to-date mirror or official mirror. Or remove conflicting packages"
 	exit 1
