@@ -282,9 +282,15 @@ mkdir -p ~/Desktop ~/Downloads ~/Pictures ~/Temp ~/.config ~/Git-TCM
 rm -rf ~/.vnx/xstartuo
 mkdir -p ~/.vnc
 touch ~/.vnc/xstartup
+#!/data/data/com.termux/files/usr/bin/sh
 
-echo '#!/bin/sh' >> "$HOME/.vnc/xstartup"
-echo 'exec /data/data/com.termux/files/home/bin/.vnc-xfce4' >> "$HOME/.vnc/xstartup"
+unset SESSION_MANAGER
+unset DBUS_SESSION_BUS_ADDRES
+S
+
+echo '#!/data/data/com.termux/files/usr/bin/sh' >> "$HOME/.vnc/xstartup"
+echo 'unset SESSION_MANAGER' >> "$HOME/.vnc/xstartup"
+echo 'unset DBUS_SESSION_BUS_ADDRES' >> "$HOME/.vnc/xstartup"
 
 cd ~/bin
 wget -O apphwa https://raw.githubusercontent.com/Prime-TITAN-CameraMan/Termux-Desktop/refs/heads/main/bin/apphwa
