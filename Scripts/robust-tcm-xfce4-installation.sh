@@ -282,11 +282,6 @@ mkdir -p ~/Desktop ~/Downloads ~/Pictures ~/Temp ~/.config ~/Git-TCM
 rm -rf ~/.vnx/xstartuo
 mkdir -p ~/.vnc
 touch ~/.vnc/xstartup
-#!/data/data/com.termux/files/usr/bin/sh
-
-unset SESSION_MANAGER
-unset DBUS_SESSION_BUS_ADDRES
-S
 
 echo '#!/data/data/com.termux/files/usr/bin/sh' >> "$HOME/.vnc/xstartup"
 echo 'unset SESSION_MANAGER' >> "$HOME/.vnc/xstartup"
